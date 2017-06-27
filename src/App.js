@@ -2,9 +2,21 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import logo from './logo.svg';
 import './App.css';
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as actions from './actions';
 
 class App extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount() {
+        this.props.action.actionsTodo();
+    }
+
   render() {
+      console.log(this)
     return (
       <div className="App">
         <div className="App-header">
@@ -20,4 +32,17 @@ class App extends Component {
   }
 }
 
-export default App;
+//export default App;
+function mapStateToProps(state, props) {
+    return {
+        // message: state.loginReducer.message,
+        // loading: state.loginReducer.loading,
+        // isLogined: state.loginReducer.isLogined,
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        action: bindActionCreators(actions, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);

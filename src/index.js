@@ -13,7 +13,9 @@ import { Route,Switch } from 'react-router'
 import { routerReducer, routerMiddleware, push } from 'react-router-redux'; //https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux
 import { ConnectedRouter } from 'connected-react-router'; //https://github.com/supasate/connected-react-router
 
-//import reducers from './reducers' // Or wherever you keep your reducers
+import * as reducers from './reducers' // Or wherever you keep your reducers
+
+console.log("reducers",reducers)
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
@@ -25,7 +27,7 @@ const middleware = routerMiddleware(history)
 // Also apply our middleware for navigating
 const store = createStore(
   combineReducers({
-    //...reducers,
+    ...reducers,
     router: routerReducer
   }),
   applyMiddleware(middleware)
