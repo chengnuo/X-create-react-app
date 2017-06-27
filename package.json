@@ -1,11 +1,18 @@
 {
-  "name": "my-app",
+  "name": "X-create-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "antd": "^2.11.2",
+    "connected-react-router": "^4.2.3",
+    "history": "^4.6.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.1"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
