@@ -103,7 +103,7 @@ module.exports = {
             X_components: path.join(SRC_PATH, 'components'), //模板模块
             X_static: path.join(SRC_PATH, 'static'), //约定模块
             X_config: path.join(ROOT_PATH, 'config'), //配置模块
-            X_routes: path.join(ROOT_PATH, 'routes'), //路由模块
+            X_routes: path.join(SRC_PATH, 'routes'), //路由模块
         },
         plugins: [
             // Prevents users from importing files from outside of src/ (or node_modules/).
