@@ -9,7 +9,7 @@ function todoReducers(state = {
 }, action) {
     switch (action.type) {
         case actions.ADD_TODO:
-            console.log("你好");
+            console.log("你好",action);
             return state;
         default:
             return state;

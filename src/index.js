@@ -64,16 +64,16 @@
 // )
 import React from 'react'
 import ReactDOM from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
 
-import App from './App';
-import Appa from './Appa';
-import { Route,Switch } from 'react-router';
+import routes from './routes'
+
 
 import { applyMiddleware, compose, createStore } from 'redux'
 import { createBrowserHistory } from 'history'
 import { routerMiddleware, connectRouter,ConnectedRouter } from 'connected-react-router'
 import { Provider } from 'react-redux'
-import rootReducer from './reducers'
+import rootReducer from './reduxs/reducers'
 
 const history = createBrowserHistory()
 
@@ -92,14 +92,9 @@ ReactDOM.render(
   <Provider store={store}>
     { /* ConnectedRouter will use the store from Provider automatically */ }
     <ConnectedRouter history={history}>
-      <div>
-          <Switch>
-            <Route exact path="/" component={App}/>
-            <Route path="/App" component={App}/>
-            <Route path="/Appa" component={Appa}/>
-          </Switch>
-      </div>
+        {routes}
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
-)
+);
+registerServiceWorker();
