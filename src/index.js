@@ -62,30 +62,18 @@
 //   </Provider>,
 //   document.getElementById('root')
 // )
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+import routes from './routes';
+import configureStore from './store/configureStore';
+import { createBrowserHistory } from 'history';
+import { ConnectedRouter } from 'connected-react-router';
+import { Provider } from 'react-redux';
 
-import routes from './routes'
+const history = createBrowserHistory();
 
-
-import { applyMiddleware, compose, createStore } from 'redux'
-import { createBrowserHistory } from 'history'
-import { routerMiddleware, connectRouter,ConnectedRouter } from 'connected-react-router'
-import { Provider } from 'react-redux'
-import rootReducer from 'X_reduxs/reducers'
-
-const history = createBrowserHistory()
-
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(
-    connectRouter(history)(rootReducer),
-    composeEnhancer(
-        applyMiddleware(
-            routerMiddleware(history),
-        ),
-    ),
-)
+const store = configureStore;
 
 
 ReactDOM.render(

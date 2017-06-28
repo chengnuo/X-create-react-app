@@ -3,7 +3,7 @@
  * fetch 中间件
  */
 import fetch from "isomorphic-fetch";
-import info from "../../../config/info";
+//import info from "../../../config/info";
 const fetchOptions = {
     method: 'post',
     headers: {
@@ -70,8 +70,8 @@ export default ({dispatch, getState}) => next => action => {
     _fetchTimeout(fetch(url, opts), 50000)
         .then(response => response.json())
         .then(json => {
-            if (json.status && json.status.code == 1200) {
-                window.location.href = `#${info.base.name}userLogin/noLogin`;
+            if (json.status && json.status.code === 1200) {
+                window.location.href = `/userLogin/noLogin`;
                 return;
             }
             if (conditionFun) {

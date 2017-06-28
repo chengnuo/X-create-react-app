@@ -13,6 +13,7 @@ class App extends Component {
 
     componentDidMount() {
         this.props.action.actionsTodo();
+        this.props.action.fetchLogin();
     }
 
     render() {
@@ -25,7 +26,7 @@ class App extends Component {
                 </div>
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
-                    <Button type="primary">Button</Button>
+                    <Button type="primary">Button2</Button>
                 </p>
             </div>
         );
