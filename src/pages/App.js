@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'antd';
-import logo from './logo.svg';
-import './css/App.css';
+import logo from 'X_assets/svg/logo.svg';
+import 'X_assets/css/App.css';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as actions from 'X_reduxs/actions';

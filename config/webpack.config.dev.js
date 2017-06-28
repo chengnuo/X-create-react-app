@@ -101,7 +101,7 @@ module.exports = {
             X_pages: path.join(SRC_PATH, 'pages'), //页面模块
             X_utils: path.join(SRC_PATH, 'utils'), //工具模块
             X_components: path.join(SRC_PATH, 'components'), //模板模块
-            X_statictype: path.join(SRC_PATH, 'statictype'), //约定模块
+            X_static: path.join(SRC_PATH, 'static'), //约定模块
             X_config: path.join(ROOT_PATH, 'config'), //配置模块
             X_routes: path.join(ROOT_PATH, 'routes'), //路由模块
         },

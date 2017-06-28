@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
-import App from './../App';
-import Appa from './../Appa';
+import App from 'X_pages/App';
+import Appa from 'X_pages/Appa';
 
 const routes = (
     <div>

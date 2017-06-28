@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/App.css';
+import 'X_assets/css/App.css';
 
 class Appa extends Component {
   render() {
