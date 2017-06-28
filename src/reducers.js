@@ -1,7 +1,7 @@
 /**
  * Created by xujunchao on 2017/6/27.
  */
-
+import { combineReducers } from 'redux'
 import * as actions from './actions';
 
 function todoReducers(state = {
@@ -16,6 +16,8 @@ function todoReducers(state = {
     }
 }
 
-export {
-    todoReducers
-}
+const rootReducer = combineReducers({
+    todo: todoReducers,
+})
+
+export default rootReducer
