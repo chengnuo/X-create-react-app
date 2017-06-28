@@ -12,6 +12,9 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
+const ROOT_PATH = path.resolve(__dirname, '..'); // 项目根目录
+const SRC_PATH = path.join(ROOT_PATH, 'src'); // 源码目录
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -85,11 +88,22 @@ module.exports = {
         // some tools, although we do not recommend using it, see:
         // https://github.com/facebookincubator/create-react-app/issues/290
         extensions: ['.js', '.json', '.jsx'],
+        /**
+         * 系统内置变量
+         * 算法,大写 [ X_文件名 ]
+         */
         alias: {
-
             // Support React Native Web
             // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
             'react-native': 'react-native-web',
+            X_reduxs: path.join(SRC_PATH, 'reduxs'), //reduxs模块
+            X_assets: path.join(SRC_PATH, 'assets'), //css 和 js 模块
+            X_pages: path.join(SRC_PATH, 'pages'), //页面模块
+            X_utils: path.join(SRC_PATH, 'utils'), //工具模块
+            X_components: path.join(SRC_PATH, 'components'), //模板模块
+            X_statictype: path.join(SRC_PATH, 'statictype'), //约定模块
+            X_config: path.join(ROOT_PATH, 'config'), //配置模块
+            X_routes: path.join(ROOT_PATH, 'routes'), //路由模块
         },
         plugins: [
             // Prevents users from importing files from outside of src/ (or node_modules/).

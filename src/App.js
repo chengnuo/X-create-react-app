@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './css/App.css';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import * as actions from './reduxs/actions';
+import * as actions from 'X_reduxs/actions';
 
 class App extends Component {
     // constructor(props) {

@@ -2,7 +2,7 @@
  * Created by xujunchao on 2017/6/27.
  */
 import { combineReducers } from 'redux'
-import * as actions from './actions';
+import * as actions from 'X_reduxs/actions';
 
 function todoReducers(state = {
 
